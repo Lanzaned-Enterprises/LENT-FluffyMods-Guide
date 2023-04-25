@@ -28,12 +28,3 @@
 
 </div>
 
-## Useful Links 
-Discord: https://discord.lanzaned.com<br>
-Github: https://github.lanzaned.com<br>
-Documentation: https://docs.lanzaned.com/
-
-## Sponsors
-<img src="https://discordapp.com/api/guilds/973137642885644338/widget.png?style=banner2" alt="Discord Banner 2"/>
-
-
