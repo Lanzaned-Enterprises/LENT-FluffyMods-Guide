@@ -257,3 +257,181 @@
         },
     },
 ```
+
+## qb-seapons/fxmanifest.lua
+*You can replace this! File completely!*
+```lua
+fx_version 'cerulean'
+game 'gta5'
+
+description 'QB-Weapons'
+version '1.0.0'
+
+shared_scripts {
+	'@qb-core/shared/locale.lua',
+	'locales/en.lua',
+	'config.lua',
+}
+
+server_script 'server/*.lua'
+client_script 'client/main.lua'
+
+files {'weaponsnspistol.meta'}
+
+data_file 'WEAPONINFO_FILE_PATCH' 'weaponsnspistol.meta'
+
+lua54 'yes'
+```
+
+## qb-weapons/server/scar17.lua
+*You will need to create his file!*
+```lua
+QBCore = exports['qb-core']:GetCoreObject()
+
+QBCore.Functions.CreateUseableItem('scar17_frame_brown', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'frame')
+end)
+QBCore.Functions.CreateUseableItem('scar17_frame_black', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'frame2')
+end)
+
+
+QBCore.Functions.CreateUseableItem('scar17_black_laser', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight1')
+end)
+QBCore.Functions.CreateUseableItem('scar17_brown_laser', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight2')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_laser2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight3')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_flash', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight4')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_laserflash', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight5')
+end)
+QBCore.Functions.CreateUseableItem('scar17_brown_laserflash', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight6')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_flash2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight7')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_lasertopflashside', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight8')
+end)
+QBCore.Functions.CreateUseableItem('scar17_brown_lasertopflashside', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight9')
+end)
+QBCore.Functions.CreateUseableItem('scar17_brown_lasertopflashside2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'flashlight10')
+end)
+
+QBCore.Functions.CreateUseableItem('scar17_tan_magazine', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'defaultclip')
+end)
+QBCore.Functions.CreateUseableItem('scar17_tanextended_magazine', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'clip2')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_magazine', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'clip3')
+end)
+QBCore.Functions.CreateUseableItem('scar17_blackextended_magazine', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'clip4')
+end)
+QBCore.Functions.CreateUseableItem('scar17_blackblue_magazine', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'clip5')
+end)
+QBCore.Functions.CreateUseableItem('scar17_blackblueextended_magazine', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'clip6')
+end)
+
+QBCore.Functions.CreateUseableItem('scar17_defaulttip', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel1')
+end)
+QBCore.Functions.CreateUseableItem('scar17_defaulttip2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel2')
+end)
+QBCore.Functions.CreateUseableItem('scar17_shortbarrel', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel3')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_silencer', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel4')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_silencer2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel5')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_silencer3', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel6')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_silencer4', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel7')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_silencer5', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel8')
+end)
+QBCore.Functions.CreateUseableItem('scar17_black_silence6', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'barrel9')
+end)
+
+QBCore.Functions.CreateUseableItem('scar17_ironsight', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope1')
+end)
+QBCore.Functions.CreateUseableItem('scar17_ironsight2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope2')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope3')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope4')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot3', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope5')
+end)
+QBCore.Functions.CreateUseableItem('scar17_acog', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope6')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot4', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope7')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope8')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope9')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech3', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope10')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech4', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope11')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech5', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope12')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech6', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope13')
+end)
+QBCore.Functions.CreateUseableItem('scar17_eotech7', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope14')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot5', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope15')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot6', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope16')
+end)
+QBCore.Functions.CreateUseableItem('scar17_reddot7', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope17')
+end)
+QBCore.Functions.CreateUseableItem('scar17_acog2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope18')
+end)
+QBCore.Functions.CreateUseableItem('scar17_sniper', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope19')
+end)
+QBCore.Functions.CreateUseableItem('scar17_sniper2', function(source, item)
+    TriggerClientEvent('weapons:client:EquipAttachment', source, item, 'scope20')
+end)
+```
